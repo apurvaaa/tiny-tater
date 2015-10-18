@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<title> Apurva's JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<style type="text/css">
+				
+		
+		#wrapper{
+			width: 600px;
+			margin: 0 auto;
+			font-family: helvetica;
+			font-size: 1.2em;
+			
+			
+		}
+		
+		input{
+			border-radius: 10px;
+			padding: 5px;
+			height: 40px;
+			width: 300px;
+			border: 1px solid grey;
+			font-size: 1.4em;
+			margin-bottom: 10px;
+			
+		}
+		
+		label {
+			width: 200px;
+			float: left;
+			padding: 15px 0 0 15px;
+		}
+		
+		#submitButton {
+			width: 100px;
+			margin: 0 0 0 215px;
+		}
+	
+	</style>
+
+
+
+</head>
+<body>
+	<div id="wrapper">
+		<form id="validationForm">
+			<label for = "email">Email:</label>
+			<input name = "email"/>
+			
+			<label for = "phone">Phone:</label>
+			<input name = "phone" />
+			
+			<label for = "pass">Password:</label>
+			<input type="password" name = "pass" />
+			
+			<label for = "passcon">Confirm password:</label>
+			<input type="password" name = "passcon" />
+			
+			<input id ="submitButton" type="submit" value="Submit"/>
+		</form>
+	</div>
+
+<script>
+ 
+ 		$("#validationForm").submit( function(event){
+ 		
+ 			alert('test');
+ 		});
+	
+	
+</script>
+
+</body>
+
+</html>
