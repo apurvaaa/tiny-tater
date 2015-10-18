@@ -97,11 +97,15 @@
 		}
 		
 		if (!($("#pass").val() == $("#passcon").val() )){
-			errorMessage += " <br/>Please match both passwords.";
+			errorMessage += " <br/>Please enter matching passwords";
 		}
 		
 		
 		$("#err").html(errorMessage);
+		
+		if (errorMessage == String("")){
+			alert("Success. Form is completed perfectly !");
+		}
 		
  		});
 	
