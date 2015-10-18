@@ -1,0 +1,603 @@
+<!doctype html>
+
+<head>
+
+<title>Apurva BBC</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type = "text/css">
+
+body{
+	margin:0;
+}
+
+
+#topbar {
+	height: 40px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.fixedwidth{
+	width: 990px;
+	margin: 0 auto;
+}
+
+#logo{
+	padding: 6px 8px 0 5px;
+	border-right: 1px #CCCCCC solid;
+	float:left;
+	height: 35px;
+
+}
+
+#redbar {
+	width: 100%;
+	height: 58px;
+	background-color: #C0141F;
+	color: white;
+}
+
+#news{
+	margin: 0 auto;
+	font-size: 2.5em;
+	font-family: Helvetica, Georgia, Serif;
+	padding-top: 2px;
+}
+
+#redmenu{
+	background-color: #AD131C;
+	height: 35px;
+	width: 100%;
+}
+
+#menuitems{
+color: #FFFFFF;
+}
+
+#signin {
+	width: 175px;
+	border-right: 1px #CCCCCC solid;
+	float:left;
+	margin: 0 ;
+	padding-bottom: 10px;
+	
+}
+
+
+#signin:hover {
+	width: 175px;
+	border-right: 1px #CCCCCC solid;
+	float:left;
+	margin: 0 ;
+	padding-bottom: 8px;
+	border-bottom: 2px solid black;
+
+}
+
+#signin img{
+	width: 2em;
+	float:left;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+#signin span{
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: .8em;
+	margin: 0 auto;
+	float:left;
+	padding-top: 12px;
+	
+	
+ }
+ 
+ #topmenuitems {
+ 	float:left;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	font-weight: 800;
+ 	margin: 0 auto;
+ 	height: 100%;
+ 
+ }
+ 
+ ul{
+ padding: 0;
+ margin: 0;
+ height: 100%;
+ }
+ 
+ #topmenuitems li{ 
+ 	float:left;
+ 	border-right: 1px solid #CCCCCC;
+ 	list-style: none;
+ 	height: 100%;
+ 	padding: 17px 15px 10px 20px;
+ 	font-size: .8em;
+ 
+ }
+ 
+ #topmenuitems li:hover { 
+ 	
+ 	
+ 	border-bottom: 4px solid black;
+ 	padding: 17px 15px 6px 20px;
+ 
+ }
+ 
+ #topmenuitems li img{
+ 	width: 14px;
+ }
+ 
+ #searchbar {
+ 	float:left;
+ 	margin: 0 auto;
+ 	padding: 8px 0px 5px 5px;
+ }
+ 
+#searchbar input{
+ 	width: 150px;
+ 	background-color: #E4E4E4;
+ 	padding: 5px 1px 4px 5px;
+ 	margin: 0;
+ 	border:none;
+ 	float:left;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	font-size: 0.8em;
+} 	
+#searchbar image{
+	float:left;
+	size: 1.2em;
+	
+}
+
+ input{
+ margin:0;
+ padding: 0;
+ }
+ 
+ .break{
+  clear:both;
+ }
+ 
+#redmenu div div{
+
+	margin: 0 auto;
+
+}
+  
+  
+ #redmenuitems li{
+ 
+ 	list-style:none;
+ 	float:left;
+ 	border-right: 1px solid #BB4545;
+ 	margin: 10px 0px 10px 0px;
+ 	padding: 0 12px 0 12px;
+ 	font-family: Helmet,Freesans,Helvetica,Arial, "sans-serif";
+ 	font-size: .9em;
+ }
+ 
+ #redmenuitems li:hover{
+ 
+ 	list-style:none;
+ 	float:left;
+ 	border-right: 1px solid #BB4545;
+ 	margin: 10px 0px 0px 0px;
+ 	padding: 0 12px 6px 12px;
+ 	font-family: Helmet,Freesans,Helvetica,Arial, "sans-serif";
+ 	font-size: .9em;
+ 	border-bottom: 4px solid white;
+ }
+ 
+ #news1 {
+ 	font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+	float:left;
+	border-bottom: 1px solid #CCCCCC;
+	width: 660px;
+	padding-bottom: 15px;
+ 	
+ }
+ 
+ #news1heading {
+ 
+ 	position: relative;
+ 	top: 10px;
+ 	font-size: 2em;
+ 	font-weight: bold;
+ 	padding-bottom: 20px;
+ 
+ }
+ 
+ #news1text {
+ 	color: #5A5A63;
+ 	width: 250px;
+ 	font-size: .9em;
+ 	float:left;
+ }
+ 
+ #news1ticker {
+ 	color: #5A5A63;
+ 	width: 250px;
+ 	font-size: .9em;
+ 	margin: 5px;
+ 	height: 90px;
+ 	
+ }
+ 
+  #news1ticker ul li{
+  	float:left;
+  	list-style: none;
+  	margin: 10px 5px 0 5px;
+  	
+  	
+  }
+  
+  #news1 div img {
+  	float:right;
+  }
+  
+  #news1down li{
+  	color: black;
+  	float:left; 
+  	position: relative;
+  	top: 20px;
+  	font-size: 0.9em; 
+  	list-style: none;
+  	padding: 5px 0 5px 0;
+  }
+  
+  #vid {
+  	background-image: url("images/vid.png");
+  	background-repeat: no-repeat;
+  	background-position: left center;
+  	padding-left: 20px !important;
+  	
+  }
+  
+  #radio {
+ 	font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+	float:right;
+	border-left: 1px solid #CCCCCC;
+	width: 305px;
+	margin: 10px 0 10px 10px;
+	padding: 0 0 15px 10px;
+	color: #404040;
+ }
+ #radiohead {
+ 	top: 10px;
+ 	font-size: 1.6em;
+ 	padding-bottom: 20px;
+ 	
+ }
+ 
+ #live {
+ background-image: url("images/live.png");
+ background-repeat: no-repeat;
+ background-position: left center;
+ padding-left: 65px;
+ 
+ }
+ 
+ #vidqueue {
+ 	font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+	float:right;
+	border-left: 1px solid #CCCCCC;
+	width: 305px;
+	margin: 10px 0 10px 10px;
+	padding: 0 0 15px 10px;
+	
+ }
+
+.vidcontainer {
+ 	top: 10px;
+ 	padding-bottom: 70px;
+ 	
+ }
+ 
+ .vidhead {
+ 	top: 10px;
+ 	font-size: 1em;
+ 	font-weight: bold;
+ 	
+ 	
+ }
+ 
+  .vidcontainer div img{
+  	float:left;
+  	padding: 0 10px 20px 0;
+  }
+ 
+ .vidcontainer ul{
+ 	width: 195px;
+ 	float:right;
+ 	margin:0;
+ }
+ 
+ .vidcontainer ul li{
+  	
+  	
+  	font-size: .9em;
+  	list-style: none;
+  	margin: 5px 5px 0 0;
+  	color: #5A5A63;
+  }
+  
+  #news2container {
+  	float:left;
+  	padding: 15px 0 20px 0;
+  	font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  	border-bottom: 1px solid #CCCCCC;
+  	margin-right: 10px;
+  }
+  
+ .news2 {
+  float:left;
+  width: 220px;
+  font-size: .9em;
+  border-right: 1px solid #CCCCCC;
+  padding: 0 20px 30px 0;
+  }
+  
+  .news2 img{
+  
+  padding: 0 0 10px 0;
+  
+  }
+  
+  .news2head {
+  	font-size: 1.2em !important;
+  	font-weight: bold;
+  	padding: 0 0 10px 0;
+  	float:left;
+  }
+  
+  .news2 div ul{
+  	padding: 10px 0 0 0;
+  	list-style: none;
+  	float:left;
+  	color: #5A5A63;
+  	
+  }
+  
+	.news2 div li{
+    	padding: 0 5px 0 5px;
+    	float:left;
+	}
+   
+	.news2ticker{
+   		float:left;
+   		padding: 5px 0 5px 0;
+	}
+   
+	.news2text {
+		color: #5A5A63;
+	}
+  
+</style>
+
+</head>
+
+<body>
+
+<div id = container>
+	<div id= topbar>
+		<div class=fixedwidth>
+			<div id=logo>
+				<img src= "images/logo.png"/>
+			</div>
+			<div id=signin>
+				<img src= "images/signin.png"/>
+				<span> Sign In</span>
+			</div>
+			<div id=topmenuitems>
+				<ul>
+					<li style="border-bottom-color: #970000"> News </li>
+					<li style="border-bottom-color: #FFEC41"> Sport </li>
+					<li style="border-bottom-color: #78C9E9"> Weather </li>
+					<li style="border-bottom-color: #0095DE"> Shop </li>
+					<li> Earth </li>
+					<li> Travel </li>
+					<li> More <img src= "images/more.png"/></li>
+					
+				</ul>
+				
+			</div>
+			<div id=searchbar>
+					<input type=text placeholder="Search"></input>
+					<img src=images/search.png />
+				</div>
+		</div>
+	</div>
+	
+	<div class=break></div>
+	
+	<div id=redbar>
+		<div class=fixedwidth id=news>
+			NEWS
+		</div> 
+	</div>
+	
+	<div class=break></div>
+	<div id=redmenu>
+		<div class=fixedwidth id=menuitems>
+			<div >
+				<ul id=redmenuitems>
+					<li style="border-bottom: 4px solid white; margin: 10px 0px 0px 0px;
+ 	padding: 0 12px 6px 12px;">Home</li>
+					<li>Video</li>
+					<li>World</li>
+					<li>US & Canada</li>
+					<li>UK</li>
+					<li>Business</li>
+					<li>Tech</li>
+					<li>Science</li>
+					<li>Magazine</li>
+					<li>Entertainment & Arts</li>
+					<li>Health</li>
+					<li style="border-right: transparent">More <img src= "images/more2.png"/></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	
+	<div class=break></div>
+	<div id=newscontent>
+		<div class=fixedwidth>
+		<div id=news1>
+		
+			<div id= news1heading> Criticism Grows Over Hajj Deaths</div>
+			<div id=news1text>Iran leads growing criticism of Saudi Arabia after the deaths of at least 717 people in a stampede during the Hajj pilgrimage.</div>
+			
+			<div >
+				<img src="http://placehold.it/400x250"/>
+			</div>
+			<div id=news1ticker> 
+				<ul>
+					<li style="position: relative; top: 5px;"> <img src = "images/time.png" style="position:relative; top: 3px; float:left;"/>1 hr ago</li> 
+					<li style="position: relative; top: 5px; padding-left:5px;  padding-down: 5px; border-left: 1px solid #5A5A63; color: #AA181F;">Middle East</li>
+				</ul>
+			
+				
+			</div>
+			<div id="news1down">
+				<ul>
+					<li>What we know so far</li>
+					<li id="vid">Hajj pilgrims very 'scared'</li>
+					<li>UK Families await news</li>
+					<li id="vid">Reporter: 'My Aunt's missing'</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="radio">
+			<div id= "radiohead">
+				Watch/Listen
+			</div>
+			<div id="live">
+				World Service Radio
+			</div>
+		</div>
+		
+		<div id="vidqueue">
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+			
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+			
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+			
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+			
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+			
+			<div class="vidcontainer">
+				<div>
+					<img src="http://placehold.it/100x60"/>
+				</div>
+				<div class="vidhead">
+					What's for dinner at the White House?
+				</div>
+				<ul>
+					<li style="border-right: 1px solid #CCCCCC;"> <img src = "images/time.png" style="position:relative; top: 2px; left: -2px;"/> 25 September 2015</li>
+					<li style="color: #AA181F;">US & Canada</li>
+				</ul>
+			</div>
+		
+		</div>
+			
+		<div id="news2container">
+			<div class= "news2">
+				<img src="http://placehold.it/220x120"/>
+				<div class="news2head">Refugee flow to Europe '8,000 daily'</div>
+				<div class="news2text">Daily flow of about 8,000 Syrian and Iraqi refugees to Europe is likely to continue, the United Nations warns.</div>
+				<div><ul><li ><img src="images/time.png" style="float:left; margin:0;"/>1 hr ago</li>
+						<li style="border-left: 1px solid #CCCCCC; color: #AA181F;">Europe</li></ul></div>
+				
+				<div class="news2ticker">migrant busses attacked in Finland</div>
+				<div class="news2ticker">Serbia: Croatia 'like WW2 fascists'</div>
+			</div>
+			
+			<div class= "news2" style="padding-left: 20px;">
+				<img src="http://placehold.it/220x120"/>
+				<div class="news2head">Refugee flow to Europe '8,000 daily'</div>
+				<div class="news2text">Daily flow of about 8,000 Syrian and Iraqi refugees to Europe is likely to continue, the United Nations warns.</div>
+				<div><ul><li ><img src="images/time.png" style="float:left; margin:0;"/>1 hr ago</li>
+						<li style="border-left: 1px solid #CCCCCC; color: #AA181F;">Europe</li></ul></div>
+				
+				<div class="news2ticker">migrant busses attacked in Finland</div>
+				<div class="news2ticker">Serbia: Croatia 'like WW2 fascists'</div>
+			</div>
+		</div>
+		
+			
+		</div>	
+	</div>
+	
+	
+	
+	
+	
+</div>
+
+
+
+</body>
