@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title> Learning JS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+
+<button id="text changer">Change Text</button> <br/><br/>
+<div id="first div">original words</div>
+<br/><br/><br/><br/><br/><br/>
+
+<button id="text appender">Append Text</button> <br/><br/>
+<div id="second div">Java Script is. .</div>
+<br/><br/><br/><br/><br/><br/>
+
+<button id="text creator">Create Text</button> <br/><br/>
+<div id="empty div"></div>
+
+<script type="text/javascript">
+
+
+document.getElementById("text changer").onclick = function(){
+
+ document.getElementById("first div").innerHTML = "Changed text";
+ }
+ 
+ document.getElementById("text appender").onclick = function(){
+ 
+ document.getElementById("second div").innerHTML = document.getElementById("second div").innerHTML + "Awesome !";
+ }
+ 
+  document.getElementById("text creator").onclick = function(){
+ 
+ document.getElementById("empty div").innerHTML = "<ul><li>cat</li><li>dog</li></ul>";
+ }
+
+</script>
+
+</body>
