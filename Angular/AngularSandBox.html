@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html ng-app>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-init= "somevar = 10">
+	
+	Number of books I have: <input type="text" ng-model="somevar"/>
+	Number of books I have read: {{somevar + ' thousand'}} !
+</body>
+</html>
