@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="myapp">
+	<head>
+		<meta charset="utf-8">
+		<title>welcome</title>
+		<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+		<link rel = "stylesheet"  href="app.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+		<script src="app.js"></script>	
+	</head>
+	<body ng-init= "somevar = 10">
+
+		<div id="header-wrapper" ng-controller="HeaderCtrl">
+			<span class = "logo pull-left">{{appDetails.title}}</span>
+			<span class = "tagline pull-left">{{appDetails.tagline}}</span>
+			<div class = "nav-wrapper pull-left">
+				<ul class="nav nav-pills">
+					<li class="active"><a href="#">Books</a></li>
+					<li><a href="#">Cart</a></li>
+				</ul>			
+		</div>
+	</div>
+
+	
+</body>
+</html>
