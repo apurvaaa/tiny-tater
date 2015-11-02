@@ -6,17 +6,42 @@
 	padding: 10px;
     margin-right: 10x;
     font-size: 35px;
-    font-family: fantasy;
+    font: 400 50px/1 'Lobster Two', Helvetica, sans-serif;
+    color: #2b2b2b;
+  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 }
 
 .tagline {
     font-size: 10px;
-    margin-top: 50px;
-    margin-left: -123px;
+    margin-top: 60px;
+    margin-left: -120px;
     font-family: monospace;
 }
 
 .nav-wrapper {
     margin-left: 100px;
     margin-top: 15px;
+}
+
+#bookListWrapper {
+	width: 100%;
+	padding: 10px;
+	
+}
+
+#bookListWrapper input {
+	width: 25%;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+#bookListWrapper .book {
+	border: 1px solid gray;
+	padding: 10px;
+	margin-bottom: 10px;	
+	margin-top: 30px;
+}
+
+#bookListWrapper .book .book-details {
+	margin-left: 160px;
 }
