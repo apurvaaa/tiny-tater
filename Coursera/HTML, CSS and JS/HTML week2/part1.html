@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Colors</title>
+
+  </head>
+
+  <body onload="colorGuess()">
+
+
+    <script>
+
+
+    function colorGuess(){
+
+      var colors = ["Aqua", "Gold", "HotPink", "IndianRed", "Khaki", "LightGrey", "Olive", "Orchid", "Sienna", "YellowGreen"];
+      //alert("colors are: "+colors);
+      var colorNum = 0;
+      var colorGuessed = "";
+      var doAgain = false;
+      var colorChoosen = "";
+
+      colorNum = Math.floor((Math.random()*9));
+      //alert("colorNum "+colorNum);
+      colorChoosen = colors[colorNum];
+      alert("color choosen is "+colors[colorNum]);
+
+      do {
+        colorGuessed = prompt("I am thinking of one of these colors:\n Aqua, Gold, HotPink, IndianRed, Khaki, LightGrey, Olive, Orchid, Sienna, YellowGreen.\n\n Which color am I thinking of?");
+        if (colors.indexOf(colorGuessed) == -1) {
+          doAgain = true;
+          alert("Sorry. I do not recognize the color. Please try again.");
+        }
+        else if (colorChoosen == colorGuessed) {
+          doAgain = false;
+          //var myBody = document.getElementByTagName("body")[0];
+          // we do this because this command always returns a nodelist. We want only the first one.
+          //myBody.style.background = colorGuessed;
+          alert("Congratulations! The color is indeed "+ colorChoosen+"!");
+        }
+        else {
+          doAgain = true;
+
+          if (colorChoosen > colorGuessed){
+            alert("Sorry. Your guess is not correct. \nPlease try agian.");}
+          else if (colorChoosen < colorGuessed){
+            alert("Sorry. Your guess is not correct. \nPlease try agian."); }
+        }
+
+
+      } while (doAgain);
+    }
+
+</script>
+
+  </body>
+</html>
