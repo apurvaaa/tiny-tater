@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <script type="text/javascript">
+      var numberOfFaces = 5;
+      var rounds = 0;
+
+
+
+      function generateFaces(){
+        rounds++;
+        var count = 0;
+        var newFace = createFace();
+        var theBody = document.getElementsByTagName("body")[0];
+
+        var theLeftSide = document.getElementById("leftside");
+        var theRightSide = document.getElementById("rightside");
+
+
+
+        //create faces for the leftside
+        while (count < numberOfFaces) {
+          //create new node
+          newFace = createFace();
+
+          //add new node
+          theLeftSide.appendChild(newFace);
+          //place new node
+          newFace.style.left = getRandom()+"px";
+          newFace.style.top = getRandom()+"px";
+          count++;
+        }
+
+        //create faces for the right side
+        var leftsideImages = theLeftSide.cloneNode(true);
+        leftsideImages.removeChild(leftsideImages.lastChild);
+        theRightSide.appendChild(leftsideImages);
+
+        //create event handler
+        createEventHandler(theLeftSide.lastChild, theLeftSide, theRightSide);
+        addGameOverEvent(theBody, theLeftSide, theRightSide);
+
+
+
+      }
+
+      function createEventHandler(smileyNode, theLeftSide, theRightSide){
+          smileyNode.onclick = function nextLevel(event){
+          event.stopPropagation();
+          numberOfFaces+=5;
+
+          //remove old smileys
+          clearSmileys(theLeftSide, theRightSide);
+
+          //run game again
+          generateFaces();
+        }
+
+
+
+      }
+
+      function createFace(){
+        var newFace = document.createElement("img");
+        newFace.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+        return newFace;
+      }
+
+
+      function getRandom(){
+        return Math.floor(450*Math.random());
+
+      }
+
+      function clearSmileys(theLeftSide,theRightSide){
+        var parentNode = [theLeftSide, theRightSide];
+        for (var node of parentNode) {
+          while (node.firstChild) {
+            node.removeChild(node.firstChild);
+
+          }
+        }
+      }
+
+      function addGameOverEvent(theBody, theLeftSide, theRightSide){
+      theBody.onclick = function gameOver(){
+        alert("Gave Over!! You had completed "+ rounds+ " rounds!");
+        theBody.onclick = null;
+        theLeftSide.lastChild.onclick = null;
+
+        //remove all smileys
+        clearSmileys(theLeftSide, theRightSide);
+
+      }}
+
+    </script>
+
+    <style media="screen">
+      .panel{
+        height: 550px;
+        width: 550px;
+      }
+
+      div{
+        position: absolute;
+      }
+
+      img{
+        position: absolute;
+      }
+
+      #leftside{
+      }
+
+      #rightside{
+        left: 551px;
+        border-left: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="generateFaces()">
+
+
+
+    <div id="container">
+    <h3>Matching Game</h3>
+    <p>
+      Click on the extra smiling face on the left.
+    </p>
+    <div class="panel" id="leftside">
+
+    </div>
+    <div class="panel" id="rightside">
+
+    </div>
+    </div>
+  </body>
+</html>

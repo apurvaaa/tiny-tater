@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Macthing Game</title>
+			<style type="text/css">
+				img {position: absolute;}
+				div {position: absolute;
+					 width: 500px; height: 500px;}
+				#rightSide{ left: 500px;
+						border-left: solid black}		
+			</style>
+	</head>
+
+		<body id="body" onload="generateFaces()">
+
+				<script>
+					var numberOfFaces = 5;
+				
+					function generateFaces() {
+					var theLeftSide = document.getElementById("leftSide");
+					var f=0;
+
+					var theRightSide = document.getElementById("rightSide");
+
+
+						while (f < numberOfFaces){
+						var img=document.createElement("img");
+						img.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+						var random_top=((Math.random()*400));
+						var random_top=Math.floor(random_top);
+						var random_left=((Math.random()*400));
+						var random_left=(Math.floor(random_left));
+						img.style.left=random_left + "px";
+						img.style.top=random_top + "px";
+						theLeftSide.appendChild(img);
+						f +=1;
+
+					
+
+					
+					var leftSideImages= theLeftSide.cloneNode(true);
+					}
+					
+					theRightSide.appendChild(leftSideImages);
+					leftSideImages=leftSideImages.removeChild(leftSideImages.lastChild);
+
+					
+					theLeftSide.lastChild.onclick=function nextlevel(event) {
+
+						event.stopPropagation();
+						numberOfFaces += 5;
+						
+
+					while (theLeftSide.firstChild){
+						theLeftSide.removeChild(theLeftSide.firstChild);
+					}
+					while (theRightSide.firstChild){
+						theRightSide.removeChild(theRightSide.firstChild);
+					}
+
+					generateFaces();
+				}
+
+					
+					var theBody=document.getElementById("body");
+
+					theBody.onclick = function GameOver() {
+
+						alert("GAME OVER!");
+						theBody.onclick = null;
+						theLeftSide.lastChild.onclick = null;
+
+				}
+			
+			}			
+					</script>
+
+
+			<h1>Matching Game</h1>
+				<p>Click on the extra smiling face on the left</p>
+				<div id="leftSide"></div>
+				<div id="rightSide"></div>
+		</body>
+</html>

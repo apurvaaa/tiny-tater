@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Colors</title>
+
+  </head>
+
+  <body onload="do_game()">
+
+
+    <script>
+
+    var colors = ["Aqua", "Gold", "HotPink", "IndianRed", "Khaki", "LightGrey", "MidnightBlue", "Olive", "Orchid", "Plum", "Sienna", "YellowGreen"];
+    //alert("colors are: "+colors);
+    var colorNum = 0;
+    var colorGuessed = "";
+    var doAgain = false;
+    var colorChoosen = "";
+    //var randomi =0;
+    var guesses = 0;
+    var hints = ["Your guess is alphabetically lower than mine. \n\nYour guess < My guess\n","Your guess is alphabetically higher than mine \n\nYour guess > My guess\n"]
+
+
+    function do_game(){
+
+
+      colorNum = Math.floor(Math.random()*colors.length);
+      //alert("colorNum "+colorNum+"\n randomi:"+randomi);
+      colorChoosen = colors[colorNum];
+      alert("color choosen is "+colors[colorNum]);
+
+      do {
+        guesses++;
+        colorGuessed = prompt("I am thinking of one of these colors:\nAqua, Gold, HotPink, IndianRed, Khaki, LightGrey, MidnightBlue, Olive, Orchid, Plum, Sienna, YellowGreen.\n\n Which color am I thinking of?");
+        doAgain = checkGuess();
+
+
+      } while (doAgain);
+    }
+
+    function checkGuess(){
+
+      if (colors.indexOf(colorGuessed) == -1) {
+        alert("Sorry. I do not recognize the color. Please try again.");
+        return true;
+      }
+      else if (colorChoosen == colorGuessed) {
+
+        var myBody = document.getElementsByTagName('body')[0];
+        // we do this because this command always returns a nodelist. We want only the first one.
+        myBody.style.background = colorGuessed;
+        alert("Congratulations!\nThe color is indeed "+ colorChoosen+"!\n You took "+guesses+" guesses. :)");
+        return false;
+      }
+      else {
+        if (colorChoosen > colorGuessed){
+          alert("Sorry. Your guess is not correct. \n"+hints[0]+" \nPlease try agian.");}
+        else if (colorChoosen < colorGuessed){
+          alert("Sorry. Your guess is not correct. \n"+hints[1]+" \nPlease try agian."); }
+          return true;
+      }
+
+    }
+
+</script>
+
+  </body>
+</html>

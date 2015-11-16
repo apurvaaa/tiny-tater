@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Try this! </title>
+	<meta name="author" content="Jae Tan">
+	<style>
+	img {position:absolute; height:100px}
+	div {position:absolute; width:500px; height:500px}
+	#rightSide {left:500px; border-left:1px solid black}
+	//apply this rule to only right div
+	</style>
+	<script>
+
+	numberOfFaces = 5;
+	
+	function generateFaces(){	
+		var theLeftSide = document.getElementById("leftSide");
+		var theRightSide = document.getElementById("rightSide");
+		var theBody = document.getElementById("theBody");
+	
+
+		for (i = 1; i <= numberOfFaces; i++) { 
+			img = document.createElement("img");
+			img.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+			var random_top = Math.random() * 401;
+			random_top = Math.floor(random_top);	
+			var random_left = Math.random() * 401;
+			random_left = Math.floor(random_left);
+			img.style.top = random_top + "px";
+			img.style.left = random_left + "px";
+			theLeftSide.appendChild(img)
+		}
+		leftSideImages = theLeftSide.cloneNode(true);
+		leftSideImages.removeChild(leftSideImages.lastChild);
+		//if lessOne = leftSideImages.removeChild(leftSideImages.lastChild)
+		//and append lessOne below to theRightSide then only one item (the removed one) will be added.
+		theRightSide.appendChild(leftSideImages)
+
+		theLeftSide.lastChild.onclick = function nextLevel(event){
+			event.stopPropagation();
+			while (theLeftSide.firstChild)
+			theLeftSide.removeChild(theLeftSide.lastChild);
+			while(theRightSide.firstChild)
+			theRightSide.removeChild(theRightSide.lastChild);
+			numberOfFaces+=5;
+			generateFaces();
+		}
+		theBody.onclick = function gameOver(){
+			alert("Game Over!");
+			theBody.onclick = null;
+		//nothing will happen from now on when user clicks anywhere in the webpage
+			theLeftSide.lastChild.onclick = null;
+		//nothing will happen from now on when user clicks the extra face
+		}
+	}
+	</script>
+</head>
+<body id="theBody" onload="generateFaces()">
+	<h1>Matching Game</h1>
+	<p>Click on the extra smiling face on the left.</p>
+	<div id="leftSide"></div>
+	<div id="rightSide"></div>
+</body>
+</html>

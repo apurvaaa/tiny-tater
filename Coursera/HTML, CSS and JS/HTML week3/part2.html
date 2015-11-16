@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <script type="text/javascript">
+      var numberOfFaces = 5;
+
+      function generateFaces(){
+        var count = 0;
+        var newFace;
+        var theLeftSide = document.getElementById("leftside");
+        while (count < numberOfFaces) {
+          //create new node
+          newFace = createFace();
+
+          //add new node
+          theLeftSide.appendChild(newFace);
+
+          //place new node
+          newFace.style.left = getRandom()+"px";
+          newFace.style.top = getRandom()+"px";
+          console.log(newFace.style.left);
+          console.log(newFace.style.top);
+          count++;
+        }
+      }
+
+      function createFace(){
+
+        var newFace = document.createElement("img");
+        newFace.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+        return newFace;
+      }
+
+
+      function getRandom(){
+        return Math.floor(450*Math.random());
+
+      }
+
+
+
+    </script>
+
+    <style media="screen">
+      .panel{
+        height: 550px;
+        width: 550px;
+      }
+
+      div{
+        position: absolute;
+      }
+
+      img{
+        position: absolute;
+      }
+
+      #leftside{
+      }
+
+      #rightside{
+        left: 551px;
+        border-left: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="generateFaces()">
+
+
+
+    <div id="container">
+    <h3>Matching Game</h3>
+    <p>
+      Click on the extra smiling face on the left.
+    </p>
+    <div class="panel" id="leftside">
+
+    </div>
+    <div class="panel" id="rightside">
+
+    </div>
+    </div>
+  </body>
+</html>
